@@ -133,7 +133,7 @@ uint16_t heart_1 [256] = {o, o, o, o, o, o, o, o, o, o, o, o, o, o, o, o,
 
 static const rmt_item32_t morse_esp[] = 
 {
-    {{{ 513, 1}}}
+    {{{ 512, 1}}}
 };
 
 
