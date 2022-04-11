@@ -41,7 +41,9 @@ void app_main()
     gpio_set_direction(BLINK_GPIO, GPIO_MODE_OUTPUT);
     gpio_set_direction(INPUT_GPIO, GPIO_MODE_INPUT);
 
-    gpio_set_intr_type(INPUT_GPIO, GPIO_INTR_NEGEDGE);
+
+    gpio_set_pull_mode(INPUT_GPIO,GPIO_PULLDOWN_ONLY); 
+    gpio_set_intr_type(INPUT_GPIO, GPIO_INTR_POSEDGE);
     gpio_install_isr_service(ESP_INTR_FLAG_DEFAULT);
     gpio_isr_handler_add(INPUT_GPIO, gpio_isr_handler, (void*) INPUT_GPIO);
     
